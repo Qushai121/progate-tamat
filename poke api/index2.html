@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #parah {
+      flex-wrap: wrap;
+      display: flex;
+      margin-left: 5vw;
+    }
+
+    .card {
+      background-color: burlywood;
+      margin: 20px;
+      width: 10vw;
+      height: 25vh;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Project Pokemon Tipe</h1>
+    <button onclick="dapatkan()">Cari Poke</button>
+    <div class="container">
+      <div id="parah"></div>
+    </div>
+
+    <script>
+      const color = {
+        fire: "#E97777",
+        grass: "#829460",
+        electric: "#B08BBB",
+        water: "#89C4E1",
+        ground: "#AD8E70",
+        rock: "#8B7E74",
+        fairy: "#F1D3B3",
+        poison: "#DC0000",
+        bug: "#FEBE8C",
+        dragon: "#B3FFAE",
+        psychic: "#DC5F00",
+        flying: "#31C6D4",
+        fighting: "#FFDE00",
+        normal: "#FFF8BC",
+      };
+
+      function dapatkan() {
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=30")
+          .then(function (response) {
+            if (response.status != 200) {
+              console.log("error sir" + response.status);
+              return;
+            }
+
+            response.json().then(function (data) {
+              const pokemons = data.results;
+
+              pokemons.forEach((pokemon) => {
+                function dalem(url) {
+                  fetch(url).then(function (response) {
+                    response.json().then(function (pokemondalem) {
+                      const gambar = pokemondalem.sprites.front_default;
+                      const id = pokemondalem.id;
+                      const type = pokemondalem.types[0].type.name;
+                      const cardd = document.getElementById("tipe");
+                      const hasilakhir = color[type];
+                      console.log(type);
+
+                      document.getElementById("parah").insertAdjacentHTML(
+                        "beforeend",
+                        `<div class="card" id="card" style="background-color:${hasilakhir}">
+                                            <h3 class="nama">${id} : ${pokemon.name}</h3>
+                                        <img src="${gambar}"/>
+                                        <p id="tipe">${type}</p><div>`
+                      );
+                    });
+                  });
+                }
+                dalem(pokemon.url);
+              });
+            });
+          })
+          .catch(function (err) {
+            console.log(err);
+          });
+      }
+    </script>
+  </body>
+</html>
