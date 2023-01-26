@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+nav{
+    background-color: rgb(64,65,70);
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    z-index: 99;
+}
+nav .logo{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 28px 20px;
+    font-size: 30px;
+}
+
+.menuham{
+    display: none;
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 35px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+#isi{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    text-align: center;
+    padding-top: 100px;
+    height: 100vh;
+}
+
+.container h1{
+    font-size: 145px;
+    letter-spacing: 5px;
+}
+
+.titik {
+    height: 25px;
+    width: 25px;
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+  }
+.container h2{
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+
+
+.container img{
+    width: 300px;
+    height: 300px;
+}
+
+#about{
+    margin-top: 100px;
+    background-color: rgb(244,244,244) ;
+}
+
+.tentang-saya{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin: 0 200px;
+    text-align: center;
+}
+.tentang-saya h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#proyek{
+    position: relative;
+}
+.proyek-contoh{
+    width: 100%;
+    margin-bottom: 200px;
+    margin-top: 150px;
+    text-align: center;
+}
+.proyek-contoh h1{
+    margin-bottom: 40px;
+}
+.card-big{
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card img{
+    margin-bottom: 30px;
+    width: 300px;
+}
+.card{
+    position: relative;
+    display: none;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .lanjut{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    height: 0.01px;
+    width: 30%;
+  }
+
+.prev{
+    
+ 
+}
+
+.next {
+
+    
+}
+
+.muncul1,
+.muncul2,
+.muncul3{
+    display: none;
+    background-color: aqua;
+    height: 50vh;
+    width: 50vh;
+    position: absolute;
+    top: 0;
+    margin-left: -106px;
+    border-radius: 15px;
+}
+
+.dalem {
+    margin-top: 10px;
+}
+
+
+.tutupcss{
+    text-shadow: 0px 1px black;
+    font-weight: 700;
+    position: absolute;
+    cursor: pointer;
+    right: 2%;
+    top: 2%;
+    
+}
+
+.menuham{
+    background-color: aqua;
+    height: 100px;
+}
+
+#hubungi-wrapper{
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(244,244,244);
+    
+}
+
+.hubungi{
+    padding-top: 100px;
+   display: flex;
+   flex-direction: column;
+    text-align: center;
+}
+
+.hubungi h1{
+    margin-bottom: 40px;
+}
+
+.hubungi input:nth-of-type(1){
+    border: none;
+    border-radius: 20px;
+    height: 6vh;
+    margin-bottom: 20px;
+    align-self: center;
+    width: 50%;
+}
+.hubungi textarea{
+    border: none;
+    border-radius: 20px;
+    height: 12vh;
+    margin-bottom: 20px;
+    align-self: center;
+    width: 50%;
+}
+
+.hubungi textarea::placeholder{
+    line-height: 40px;
+}
+
+.hubungi input:nth-of-type(2){
+    background-color: rgb(243, 229, 134);
+    border: none;
+    border-radius: 20px;
+    height: 6vh;
+    margin-bottom: 20px;
+    align-self: center;
+    width: 20%;
+}
+
+.hubungi input:nth-of-type(2):hover{
+    background-color: rgb(250, 233, 120) ;
+}
+
+.hubungi input:nth-of-type(2):active{
+    background-color: rgb(243, 224, 98);
+}
+
+.luar{
+    display: none;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px #ccc solid;
+    text-align: left;
+    font-size: 15px;
+  }
+
+footer{
+    width: 100%;
+    background-color: rgb(124,125,130);
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .kiri{
+    color: white;
+    margin-top: 23px;
+    margin-left: 30px;
+}
+
+footer .kanan a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    flex-direction: column;
+    margin: 20px;
+}
+
+@media (min-width:865px){
+   nav img{
+    display: none;
+   }
+}
+@media (min-width:670px){
+   nav img{
+    display: none;
+   }
+}
+
+@media (max-width:1129px){
+    nav img{
+        display: block;
+       }
+    nav .logo{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    nav img{
+        width: 5vh;
+        height:4vh;
+        top:26%;
+        right: 6%;
+      position: absolute;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .container h1{
+        font-size: 45px;
+    }
+
+    .titik{
+        margin-left: -10px;
+        width: 15px;
+        height: 15px;
+    }
+   
+    #about{
+        position: relative;
+        height: 300px;
+        background-color: rgb(244,244,244) ;
+    }
+    
+
+    .tentang-saya h1{
+        margin-top: 20px;
+        width: 96vw;
+        position: absolute;
+        top: 0;
+        left: 3%;
+        right: 0;
+    }
+
+    .tentang-saya p{
+        padding-bottom: 70px;
+        width: 90vw;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .lanjut{
+        width: 60%;
+       }
+}
+
+@media (max-width:670px) {
+    
+    nav .logo{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    nav img{
+        width: 5vh;
+        height:4vh;
+        top:26%;
+        right: 6%;
+      position: absolute;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .container h1{
+        font-size: 45px;
+    }
+
+    .titik{
+        margin-left: -10px;
+        width: 15px;
+        height: 15px;
+    }
+
+    #about{
+        position: relative;
+        height: 400px;
+        background-color: rgb(244,244,244) ;
+    }
+
+    .tentang-saya h1{
+        margin-top: 20px;
+        width: 96vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .tentang-saya p{
+        width: 90vw;
+        margin-left: 15px;
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .card{
+        margin-bottom: 20px;
+    }
+    .lanjut{
+        width: 90%;
+       }
+
+}
+
+@media (max-width:400px){
+    #about{
+        position: relative;
+        height: 500px;
+        background-color: rgb(244,244,244) ;
+    }
+   .lanjut{
+    width: 90%;
+   }
+ 
+}

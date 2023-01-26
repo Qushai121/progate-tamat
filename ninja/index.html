@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qushai Progate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Ninja Ken.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="#isi">NINJA KEN</a>
+        <img id="hamburger" style="width: 10vh; height: 4vh; " src="img/bars-solid.svg" alt="">
+        <ul>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#proyek">Proyek Contoh</a></li>
+            <li><a href="#hubungi-wrapper">Hubungi Saya</a></li>
+            <li><a href="#hubungi-wrapper">Faq</a></li>
+        </ul>
+    </div>
+</nav>
+<br><br><br><br><br><br>
+
+<div class="menuham" style="position: absolute;" id="menuham">
+    <ul>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#proyek">Proyek Contoh</a></li>
+        <li><a href="#hubungi-wrapper">Hubungi Saya</a></li>
+        <li><a href="#hubungi-wrapper">Faq</a></li>
+    </ul>
+</div>
+
+    <section id="isi">
+        <div class="container">
+            <h1>NINJA KEN <span class="titik"></span></h1>
+            <h2>MY PORTOFOLIO</h2>
+            <img src="img/Ninja Ken.png" alt="">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="tentang-saya">
+            <h1>Tentang Saya</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nobis nostrum! Mollitia ducimus dolorum ab, dolor atque, accusamus doloremque maxime nobis minima eum sint molestias? Expedita eius eos, voluptatem recusandae
+                 fugiat provident. Non est voluptatum autem praesentium itaque, cum facilis ea in voluptatibus cumque, voluptas quasi modi eaque impedit officia optio delectus iste consectetur tempora harum asperiores amet odio voluptates velit? Eos,
+                  placeat iure reprehenderit quibusdam inventore dolorem molestiae perspiciatis quos ducimus et 
+                praesentium quam, distinctio explicabo nam repellendus debitis laudantium, maiores culpa minus? Porro eius voluptatibus, delectus deserunt nostrum blanditiis dicta neque aliquam corporis illum nisi beatae accusamus sint.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="proyek">
+        <div class="proyek-contoh">
+            <h1>Proyek Contoh</h1>
+            <div class="card-big">
+                
+            <div class="card fade" id="card ">
+                <img src="img/1.png" alt="" onclick="muncul('muncul1')">
+            <div id="muncul1" class="muncul1">
+                <span class="tutupcss" onclick="tutup('tutup1')">X</span>
+                <img class="dalem" src="img/1.png" alt="">
+                <h1>Foto 1</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magnam!</p>
+            </div>
+               
+            </div>
+            <div class="card fade" id="card ">
+                <img src="img/2.png" alt="" onclick="muncul('muncul2')">
+                <div id="muncul2" class="muncul2">
+                    <span class="tutupcss" onclick="tutup('tutup2')">X</span>
+                    <img class="dalem" src="img/2.png" alt="">
+                    <h1>Foto 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magnam!</p>
+                </div>
+    
+            </div>
+            <div class="card fade" id="card ">
+                <img src="img/3.png" alt="" onclick="muncul('muncul3')">
+                <div id="muncul3" class="muncul3">
+                    <span class="tutupcss" onclick="tutup('tutup3') ">X</span>
+                    <img class="dalem" src="img/3.png" alt="">
+                    <h1>Foto 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, magnam!</p>
+                </div>
+                
+            </div>
+            <div class="lanjut">
+            <a class="prev" onclick="updateSlide(-1)">&#10094;</a>
+            <a class="next" onclick="updateSlide(1)">&#10095;</a>
+            </div>
+        </div>
+        <!-- <button id="munculkan">ddfdfd</button> -->
+        </div>
+    </section>
+
+    <section id="hubungi-wrapper">
+        <div class="hubungi">
+            <h1>Hubungi Saya</h1>
+            <input type="email" name="" id="" placeholder="   Email(Diperlukan)">
+            <textarea name="" id="" placeholder="   Message(Diperlukan)"></textarea>
+            <input type="submit" name="" id="" value="Kirim" >
+        </div>
+    </section>
+
+    <section id="Faq">
+        <div style=" background-color: rgb(244,244,244);">
+    <h1  style="text-align: center; margin-bottom: 30px;">Faq</h1>
+            <button class="accordion">Tiga</button>
+            <div class="luar">
+                <h2>Satu</h2>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+            </div>
+            <button class="accordion">Tiga</button>
+            <div class="luar"> 
+                <h2>Dua</h2>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+            </div>
+            <button class="accordion">Tiga</button>
+            <div class="luar">
+                <h2>Tiga</h2>
+                <p>1</p>
+                <p>1</p>
+                <p>1</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="kiri">
+            <h1>NINJA KEN</h1>            
+        </div>
+        <div class="kanan">
+            <a href="#about">Tentang Saya</a>
+            <a href="#proyek">Proyek Contoh</a>
+            <a href="#hubungi-wrapper">Hubungi Saya</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
